@@ -5,11 +5,6 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@v4.2.2
-
-      - name: yaml-lint
-        uses: ibiqlik/action-yamllint@v3.1.1
-        with:
-          config_file: .yamllint
+    uses: wittdennis/pipelines/.github/workflows/yaml-lint.yaml@1.4.0
+    with:
+      yamllint-path: .yamllint
